@@ -44,12 +44,12 @@ export default function Testimonial(props) {
   };
 
   return (
-    <div>
+    <div className="testimonial-container fade-in" id={props.id || ""}>
       <ScreenHeading
         title={"Testimonial"}
         subHeading={"What My Client Say About Me"}
       />
-      <section className="testimonial-section fade-in" id={props.id || ""}>
+      <section className="testimonial-section">
         <div className="container">
           <div className="row">
             <OwlCarousel
@@ -201,10 +201,10 @@ export default function Testimonial(props) {
             </OwlCarousel>
           </div>
         </div>
+        <div className="footer-image">
+          <img src={shape} alt="Phot0 not responding" />
+        </div>
       </section>
-      <div className="footer-image">
-        <img src={shape} alt="Phot0 not responding" />
-      </div>
     </div>
   );
 }

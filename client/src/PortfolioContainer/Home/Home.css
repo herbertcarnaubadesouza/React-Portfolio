@@ -1,9 +1,4 @@
 .home-container {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 670px;
   background-image: linear-gradient(to right, #000000, #070714, rgb(8, 8, 44));
 }
 
@@ -13,4 +8,17 @@
   left: 0;
   height: 100%;
   width: 100%;
+  z-index: 0;
+}
+
+.home-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }

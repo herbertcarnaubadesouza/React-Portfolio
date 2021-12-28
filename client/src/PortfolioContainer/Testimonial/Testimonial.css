@@ -1,9 +1,14 @@
+.testimonial-container {
+  --section-padding: 80px;
+}
+
 .testimonial-section {
-  padding: 80px 0 80px;
+  padding: var(--section-padding) 0;
   background-image: url("../../../src/assets/Testimonial/bg-1.jpg");
   background-position: center;
   background-attachment: fixed;
   position: relative;
+  transform: translateY(1px);
 }
 .testimonial-section::before {
   content: "";
@@ -18,14 +23,12 @@
 }
 .footer-image {
   overflow: hidden;
-  margin-top: -110px;
-  position: absolute;
+  margin-bottom: calc((-1 * var(--section-padding)) - 1px);
 }
 
 .footer-image img{
   width: 150%;
   height: 170px;
-  z-index: 10;
 }
 
 

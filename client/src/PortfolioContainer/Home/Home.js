@@ -11,9 +11,11 @@ export default function Home(props) {
   return (
     <div className="home-container" id={props.id || ""}>
       <Particles className="particles" options={particlesConfig}/>
-      <Header />
-      <Profile />
-      <Footer />
+      <div className="home-content">
+        <Header />
+        <Profile />
+        <Footer />
+      </div>
     </div>
   );
 }

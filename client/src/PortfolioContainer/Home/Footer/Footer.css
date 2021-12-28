@@ -1,17 +1,13 @@
-.footer-parent img {      
+.footer-container img {      
   margin-top: 30px;
-  margin-bottom: -10px;
+  margin-bottom: -1px;
 }
 
 
 /*IPAD PRO RESPONSIVENESS*/
-@media only screen and (max-width: 1110px) {
-  .footer-parent img {
-    display: flex;
-    max-width: 200%;
-    height: 170px;
-    align-items: flex-end;
+/* @media only screen and (max-width: 1110px) {
+  .footer-container img {
     margin-top: 30px;
-    margin-bottom: -10px;
+    margin-bottom: -1px;
   }
-} 
+}  */
