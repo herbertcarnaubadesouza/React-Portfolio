@@ -4,7 +4,6 @@
   background-position: center;
   background-attachment: fixed;
   position: relative;
-  z-index: -1;
 }
 .testimonial-section::before {
   content: "";
@@ -20,11 +19,13 @@
 .footer-image {
   overflow: hidden;
   margin-top: -110px;
+  position: absolute;
 }
 
 .footer-image img{
   width: 150%;
   height: 170px;
+  z-index: 10;
 }
 
 
