@@ -5,8 +5,8 @@ import "./Profile.css";
 
 export default function Profile() {
   return (
-    <div className="profile-container">
-      <div className="profile-parent">
+    <div className="profile-container">           
+      <div className="profile-parent">        
         <div className="profile-details">
           <div className="colz">
             <div className="colz-icon">
@@ -30,7 +30,7 @@ export default function Profile() {
           <div className="profile-details-name">
             <span className="primary-text">
               {" "}
-              Hello, I'M <span className="highlighted-text">Ehiedu</span>
+              Hello, I'M <span className="highlighted-text">Herbert</span>
             </span>
           </div>
           <div className="profile-details-role">
@@ -40,15 +40,15 @@ export default function Profile() {
                 <Typical
                   loop={Infinity}
                   steps={[
-                    "Enthusiastic Dev 😎",
+                    "Enthusiastic Dev",
                     1000,
-                    "Full stack Developer 💻",
+                    "Full stack Developer",
                     1000,
-                    "Mern stack Dev 📱",
+                    "Mern stack Dev",
                     1000,
-                    "Cross Platform Dev 🔴",
+                    "Cross Platform Dev",
                     1000,
-                    "React/React Native 🌐",
+                    "React/React Native",
                     1000,
                   ]}
                 />
@@ -63,7 +63,7 @@ export default function Profile() {
             <button className="btn primary-btn"
             onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
             > Hire Me </button>
-            <a href="ehizcv.pdf" download="Ehiedu Ehizcv.pdf">
+            <a href="Herbert Souza.pdf" download="Herbert Souza.pdf">
               <button className="btn highlighted-btn">Get Resume</button>
             </a>
           </div>

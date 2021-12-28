@@ -1,7 +1,16 @@
 .home-container {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: space-between;
   min-height: 670px;
-  background-image: url("../../assets/Home/bg.jpg");
+  background-image: linear-gradient(to right, #000000, #070714, rgb(8, 8, 44));
+}
+
+#particles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }

@@ -16,7 +16,7 @@
 }
 .about-me-profile {
   width: 50%;
-  background-image: url("../../assets/AboutMe/me.jpg");
+  background-image: url("../../assets/AboutMe/EuProgramando.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -47,7 +47,7 @@
   height: 12px;
   width: 12px;
   margin: 0 10px 0 0;
-  background-color: #ff5823;
+  background-color: #d41a39;
   border-radius: 50%;
 }
 .about-me-options .highlighted-btn {

@@ -35,7 +35,7 @@
   color: var(--white);
 }
 .selected-header-option {
-  color: var(--dark-orange);
+  color: var(--dark-red);
 }
 
 /*IPAD PRO RESPONSIVENESS*/
@@ -47,6 +47,7 @@
 @media only screen and (max-width: 970px) {
   .header-hamburger {
     display: block;
+    z-index: 100;
   }
   .header-parent {
     width: 100%;

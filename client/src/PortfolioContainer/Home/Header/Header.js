@@ -23,6 +23,7 @@ export default function Header() {
 
   const getHeaderOptions = () => {
     return TOTAL_SCREENS.map((Screen, i) => (
+      Screen.isMenu &&
       <div
         key={Screen.screen_name}
         className={getHeaderOptionsClasses(i)}
@@ -70,7 +71,7 @@ export default function Header() {
           <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
         </div>
         <div className="header-logo">
-          <span>EDUBABA</span>
+          <span>JUNIN</span>
         </div>
         <div
           className={

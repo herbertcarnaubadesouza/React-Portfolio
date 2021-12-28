@@ -10,7 +10,7 @@ import "./Testimonial.css";
 import lady from "../../../src/img/Testimonial/lady.png";
 import mike from "../../../src/img/Testimonial/mike.png";
 import man from "../../../src/img/Testimonial/man.png";
-import shape from "../../../src/img/Testimonial/shape-bg.png";
+import shape from "../../../src/img/Testimonial/wavesNegative.svg";
 
 export default function Testimonial(props) {
   let fadeInScreenHandler = (screen) => {
