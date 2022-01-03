@@ -4,7 +4,8 @@
 
 .testimonial-section {
   padding: var(--section-padding) 0;
-  background-image: url("../../../src/assets/Testimonial/bg-1.jpg");
+  background-image: linear-gradient(to right, #000000, #1f0722, rgb(68, 5, 57));
+
   background-position: center;
   background-attachment: fixed;
   position: relative;
@@ -18,8 +19,6 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.85;
-  background-color: #1f2235;
 }
 .footer-image {
   overflow: hidden;
@@ -93,6 +92,31 @@
   font-weight: 400;
   margin: 0;
 }
+
+
+/* Estilo dos dots */
+.testimonial-container .owl-dots{
+  text-align: center;
+  margin-top: 20px;
+}
+.testimonial-container .owl-dot{
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none!important;
+  border-radius: 50%;
+  border: 2px solid whitesmoke!important;
+  transition: all 0.3s ease;
+}
+.testimonial-container .owl-dot.active{
+  width: 35px;
+  border-radius: 14px;
+}
+.testimonial-container .owl-dot.active,
+.testimonial-container.owl-dot:hover{
+  background: whitesmoke!important;
+}  
+
 
 
 @media only screen and (max-width: 1110px) {

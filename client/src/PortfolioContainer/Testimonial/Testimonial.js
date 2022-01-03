@@ -7,9 +7,12 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./Testimonial.css";
-import lady from "../../../src/img/Testimonial/lady.png";
-import mike from "../../../src/img/Testimonial/mike.png";
-import man from "../../../src/img/Testimonial/man.png";
+
+import lucas from "../../../src/img/Testimonial/tutaTestemunha.jpg"
+import marta from "../../../src/img/Testimonial/Marta.png"
+import erica from "../../../src/img/Testimonial/erica.jpg"
+import diego from "../../../src/img/Testimonial/Diego.png"
+
 import shape from "../../../src/img/Testimonial/wavesNegative.svg";
 
 export default function Testimonial(props) {
@@ -28,17 +31,20 @@ export default function Testimonial(props) {
     animateIn: "bounceInRight",
     animateOut: "bounceOutRight",
     dots: true,
-    autoplay: true,
+    autoplay: false,
     smartSpeed: 1000,
     responsive: {
       0: {
         items: 1,
+        nav: false,
       },
-      768: {
-        items: 1,
+      600: {
+        items: 2,
+        nav: false,
       },
       1000: {
         items: 3,
+        nav: false,
       },
     },
   };
@@ -47,7 +53,7 @@ export default function Testimonial(props) {
     <div className="testimonial-container fade-in" id={props.id || ""}>
       <ScreenHeading
         title={"Testimonial"}
-        subHeading={"What My Client Say About Me"}
+        subHeading={"What My Clients Say About Me"}
       />
       <section className="testimonial-section">
         <div className="container">
@@ -86,9 +92,9 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img src={lady} alt="no internet connection"></img>
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO InansGlobal</p>
+                    <img src={diego} alt="no internet connection"></img>
+                    <h5>Diego Dias</h5>
+                    <p>CEO Bioway Acessoria Esportiva</p>
                   </div>
                 </div>
               </div>
@@ -122,9 +128,9 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img src={mike} alt="no internet connection"></img>
-                    <h5>Mikel</h5>
-                    <p>CEO MikeTech</p>
+                    <img src={marta} alt="no internet connection"></img>
+                    <h5>Marta Carnauba</h5>
+                    <p>Acupuncturist and Ozone Therapist</p>
                   </div>
                 </div>
               </div>
@@ -157,9 +163,9 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img src={lady} alt="no internet connection"></img>
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO InansGlobal</p>
+                    <img src={erica} alt="no internet connection"></img>
+                    <h5>Erica Moro</h5>
+                    <p>Owner of the hotel Avra Tatajuba</p>
                   </div>
                 </div>
               </div>
@@ -192,9 +198,9 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img src={man} alt="no internet connection"></img>
-                    <h5>John Smith</h5>
-                    <p>Bnaker</p>
+                    <img src={lucas} alt="no internet connection"></img>
+                    <h5>Lucas Monteiro</h5>
+                    <p>Photographer and Video Editor</p>
                   </div>
                 </div>
               </div>

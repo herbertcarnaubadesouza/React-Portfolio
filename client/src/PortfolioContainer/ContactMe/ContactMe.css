@@ -12,7 +12,7 @@
   margin: 0 auto;
   flex-direction: column;
   justify-content: center;
-  background-color: #1f2235;
+  background-color: #10101b;
 }
 
 .central-form h2 {
@@ -41,6 +41,7 @@
 }
 
 .back-form .img-back img {
+  margin-top: 10px;
   width: 100%;
   opacity: 0.5;
 }
@@ -56,14 +57,14 @@
   margin-top: -52px;
   opacity: 0.9;
   background-color: white;
-  box-shadow: 0 0px 20px -2px #1f2235;
+  box-shadow: 0 0px 20px -2px #10101b;
   border-radius: 12px;
 }
 
 form p {
   text-align: center;
   margin-bottom: 10px;
-  color: red;
+  color: #10101b;
   letter-spacing: 0.1rem;
   font-family: "Poppins Bold";
 }
@@ -88,11 +89,11 @@ textarea {
 }
 
 textarea:focus {
-  border: 2px solid rgba(30, 85, 250, 0.47);
+  border: 2px solid #10101b;
   background-color: #fff;
 }
 form input:focus {
-  border: 2px solid rgba(30, 85, 250, 0.47);
+  border: 2px solid #10101b;
   background-color: #fff;
 }
 
@@ -102,7 +103,6 @@ form button {
   outline: none;
   width: 900px;
   color: rgb(230, 227, 227);
-  border: 2px solid red;
   font-size: 12px;
   border-radius: 19px;
   background-color: #1f2235;
@@ -113,9 +113,8 @@ form button {
 }
 
 form button:hover {
-  background-color: #1f2235;
-  transition: all ease 1s;
-  border: 2px solid #1f2235;
+  background-color: whitesmoke;   
+  color: #1f2235;
 }
 
 button .load {
@@ -151,10 +150,14 @@ button .load img {
 
   form {
     flex: 0.9;
-  }
+  }  
 }
 @media screen and (max-width: 414px) {
   .central-form h2 {
     font-size: 16px;
+  }
+  .back-form .img-back img {
+    width: 100%;
+    opacity: 0.2!important;
   }
 }

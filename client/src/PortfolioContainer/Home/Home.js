@@ -4,7 +4,7 @@ import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import Particles from "react-tsparticles";
 import particlesConfig from "./Particles/particles";
-
+import './Particles/particles.css'
 import "./Home.css";
 
 export default function Home(props) {

@@ -5,9 +5,11 @@
 
 
 /*IPAD PRO RESPONSIVENESS*/
-/* @media only screen and (max-width: 1110px) {
+ @media only screen and (max-width: 1110px) {
   .footer-container img {
-    margin-top: 30px;
-    margin-bottom: -1px;
+    margin-top: 50px;
+    height: 150px;
+    width: 150%;
+    margin-bottom: -50px;
   }
-}  */
+} 

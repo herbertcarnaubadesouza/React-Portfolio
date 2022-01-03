@@ -1,14 +1,34 @@
 import React, { useState, useEffect } from "react";
+import DropDown from "./DropDown/DropDown";
 import {
   TOTAL_SCREENS,
   GET_SCREEN_INDEX,
 } from "../../../utilities/commonUtils";
 import ScrollService from "../../../utilities/ScrollService";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faLanguage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
 
 export default function Header() {
+  const languages = [
+    {
+      code: "fr",
+      name: "Français",
+      country_code: "fr",
+    },
+    {
+      code: "en",
+      name: "English",
+      country_code: "gb",
+    },
+    {
+      code: "ar",
+      name: "العربية",
+      dir: "rtl",
+      country_code: "sa",
+    },
+  ];
+
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
 
@@ -22,16 +42,18 @@ export default function Header() {
     ScrollService.currentScreenBroadcaster.subscribe(updateCurrentScreen);
 
   const getHeaderOptions = () => {
-    return TOTAL_SCREENS.map((Screen, i) => (
-      Screen.isMenu &&
-      <div
-        key={Screen.screen_name}
-        className={getHeaderOptionsClasses(i)}
-        onClick={() => switchScreen(i, Screen)}
-      >
-        <span>{Screen.screen_name}</span>
-      </div>
-    ));
+    return TOTAL_SCREENS.map(
+      (Screen, i) =>
+        Screen.isMenu && (
+          <div
+            key={Screen.screen_name}
+            className={getHeaderOptionsClasses(i)}
+            onClick={() => switchScreen(i, Screen)}
+          >
+            <span>{Screen.screen_name}</span>
+          </div>
+        )
+    );
   };
 
   const getHeaderOptionsClasses = (index) => {
@@ -82,6 +104,33 @@ export default function Header() {
         >
           {getHeaderOptions()}
         </div>
+        <ul>
+          <DropDown
+            icon={<FontAwesomeIcon className="language" icon={faLanguage} />}
+          >
+            {languages.map(({ code, name, country_code }) => (
+              <li key={country_code}>
+                <button
+                  className={classNames("dropdown-item", {
+                    disabled: currentLanguageCode === code,
+                  })}
+                  onClick={() => {
+                    i18next.changeLanguage(code);
+                    console.log(code);
+                  }}
+                >
+                  <span
+                    className={`flag-icon flag-icon-${country_code} mx-2`}
+                    style={{
+                      opacity: currentLanguageCode === code ? 0.5 : 1,
+                    }}
+                  ></span>
+                  {name}
+                </button>
+              </li>
+            ))}
+          </DropDown>
+        </ul>
       </div>
     </div>
   );

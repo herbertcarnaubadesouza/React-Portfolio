@@ -18,7 +18,7 @@ const particlesConfig = {
         color: "#000000"
       },
       polygon: {
-        nb_sides: 7
+        nb_sides: 1
       },        
     },
     opacity: {

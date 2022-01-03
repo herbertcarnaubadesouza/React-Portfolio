@@ -14,13 +14,13 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTSANTS = {
     description:
-      "Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.",
+      "Full stack web and mobile developer with background knowledge in REST API, along with a knack of building applications with utmost efficiency. An extremely focused professional with a strong desire to learn more.",
     highlights: {
       bullets: [
-        "Full Stack web and mobile development",
+        "Mobile and Web Developer",
         "Interactive Front End as per the design",
-        "React and React Native",
-        "Redux for State Mnanagement",
+        "React and Xamarin Forms Knowledge",
+        ".NET Developer",
         "Building REST API",
         "Managing database",
       ],
@@ -56,14 +56,13 @@ export default function AboutMe(props) {
               {renderHighlight()}
             </div>
             <div className="about-me-options">
-              <button
-                className="btn primary-btn"
-                onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
-              >
+            <a href="https://api.whatsapp.com/send?phone=5511957978876&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20um%20site!">
+              <button className="btn hireme-btn">
                 {" "}
-                Hire Me{" "}
+                Talk To Me{" "}
               </button>
-              <a href="Herbert Souza.pdf" download="Herbert Souza.pdf">
+            </a>
+              <a href="Herbert SouzaCV.pdf" download="Herbert SouzaCV.pdf">
                 <button className="btn highlighted-btn">Get Resume</button>
               </a>{" "}
             </div>

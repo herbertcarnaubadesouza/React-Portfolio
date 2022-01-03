@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+// import "flag-icon-css/css/flag-icon.min.css"
 
 ReactDOM.render(
   <React.StrictMode>

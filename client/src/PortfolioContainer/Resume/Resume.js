@@ -44,7 +44,7 @@ const Resume = (props) => {
 
   /* STATIC RESUME DATA FOR THE LABELS*/
   const resumeBullets = [
-    { label: "Education", logoSrc: "education.svg" },
+    { label: "Services", logoSrc: "service.svg" },
     { label: "Work History", logoSrc: "work-history.svg" },
     { label: "Programming Skills", logoSrc: "programming-skills.svg" },
     { label: "Projects", logoSrc: "projects.svg" },
@@ -55,97 +55,89 @@ const Resume = (props) => {
   const programmingSkillsDetails = [
     { skill: "JavaScript", ratingPercentage: 85 },
     { skill: "React JS", ratingPercentage: 85 },
-    { skill: "React Native", ratingPercentage: 85 },
-    { skill: "Express JS", ratingPercentage: 89 },
-    { skill: "Node JS", ratingPercentage: 89 },
-    { skill: "Mongo Db", ratingPercentage: 70 },
-    { skill: "Core Java", ratingPercentage: 80 },
-    { skill: "HTML", ratingPercentage: 80 },
-    { skill: "CSS", ratingPercentage: 80 },
+    { skill: "Xamarin Forms", ratingPercentage: 85 },
+    { skill: ".NET Core", ratingPercentage: 89 },
+    { skill: ".NET Framework", ratingPercentage: 89 },
+    { skill: "SQL Server", ratingPercentage: 70 },
+    { skill: "Wordpress", ratingPercentage: 80 },    
+    { skill: "Bootstrap", ratingPercentage: 80 },
   ];
 
   const projectsDetails = [
     {
-      title: "Personal Portfolio Website",
+      title: "SAP B1 Data Collector",
       duration: { fromDate: "2020", toDate: "2021" },
       description:
         "A Personal Portfolio website to showcase all my details and projects at one place.",
-      subHeading: "Technologies Used: React JS, Bootsrap",
+      subHeading: "Technologies Used: .NET Core, Xamarin Forms, SQL Server",
     },
     {
-      title: "Mobile E-shop ",
+      title: "Hotel Website",
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "An ecommerce application designed to sell products online wth payment system integration",
+        "Created a beautiful responsive website for a hotel in Tatajuba, Ceará.",
       subHeading:
-        "Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux.",
+        "Technologies Used:  Javascript, Html, Css, Jquery, Wordpress.",
     },
     {
-      title: "Ecommerce Website ",
-      duration: { fromDate: "2020", toDate: "2021" },
+      title: "A lot of Personal Websites",
+      duration: { fromDate: "2020", toDate: "Present" },
       description:
-        "Online ecommerce website for showcasing and selling products onlne with payment system integration, both Paypal and Stripe",
+        "Online ecommerce website, personal portfolio and more. Come to see the best of the responsive websites.",
       subHeading:
-        "Technologies Used: Mongo DB, Epress Js, React Js, Node JS, Redux, Bootstrap.",
+        "Technologies That I Use: Node Js, React Js, Wordpress, Bootstrap, Jquery.",
     },
   ];
 
-  const resumeDetails = [
-    <div className="resume-screen-container" key="education">
-      <ResumeHeading
-        heading={"University of Legon Accra"}
-        subHeading={"BACHELOR OF SCIENCE INFORMATION TECHNOLOGY"}
-        fromDate={"2014"}
-        toDate={"2018"}
-      />
 
+  const workHistoryDetails = [
+    {
+      title: "Claudino Softaware Solutions",
+      duration: { fromDate: "2020", toDate: "2021" },
+      description:
+        "Developed a lot projects with Xamarin Forms and REST API for a SAPB1 Data Collector.",
+      subHeading: "Technologies Used: .NET Core, Xamarin Forms, SQL Server",
+    },
+    {
+      title: "Smark CRM",
+      duration: { fromDate: "2022", toDate: "Present" },
+      description:
+        "Works in the maintenance and development of the company's product.",
+      subHeading:
+        "Technologies That I Use:  .NET Framework, SQL Server, Jquery, Bootstrap, Ajax.",
+    },
+  ];
+
+
+  const resumeDetails = [
+    /* Services */
+    <div className="resume-screen-container" key="services">
       <ResumeHeading
-        heading={"National Youth Service Corps"}
-        subHeading={"Ministry Of Science And Technogy. Uyo Akwa Ibom State"}
-        fromDate={"2019"}
-        toDate={"2020"}
+        heading="Website Development"
+        description="Come put your services on a fully responsive website, working on mobile, tablet, notebook and computers. The development time is proportional to the size of the site."
       />
       <ResumeHeading
-        heading={"High School "}
-        subHeading={"Command Secondary School Mbiri"}
-        fromDate={"2007"}
-        toDate={"2012"}
+        heading="Social Media Management"
+        description="Currently, if you dont't put your services on social media, you are at a disadvantage. Talk to me and I solve this problem. The group manages more than 15 Intagram accounts."
+      />
+      <ResumeHeading
+        heading="Put Your Site At The Top Of Google"
+        description="It's not enough to build a beautiful website if it doesn't appear to anyone. Make your website with us. We put your website at the top of Google. That way you will be able to reach more people with your product."
       />
     </div>,
 
-    /* WORK EXPERIENCE */
-    <div className="resume-screen-container" key="work-experience">
-      <div className="experience-container">
+    /* WORK HISTORY */
+    <div className="resume-screen-container" key="workHistory">
+      {workHistoryDetails.map((workHistoryDetails, index) => (
         <ResumeHeading
-          heading={"Ehizeex Technoloy"}
-          subHeading={"FULL STACK DEVELOPER INTERN"}
-          fromDate={"2021"}
-          toDate={"Present"}
+          key={index}
+          heading={workHistoryDetails.title}
+          subHeading={workHistoryDetails.subHeading}
+          description={workHistoryDetails.description}
+          fromDate={workHistoryDetails.duration.fromDate}
+          toDate={workHistoryDetails.duration.toDate}
         />
-        <div className="experience-description">
-          <span className="resume-description-text">
-            Currently working as MERN stack web and mobile developer and also an
-            online instructor on udemy.
-          </span>
-        </div>
-        <div className="experience-description">
-          <span className="resume-description-text">
-            - Developed an ecommerce website for client with the dashboard for
-            managing the products, managing reviews, users, payment etc. .
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - Integrated the web app with backend services to create new user
-            onboarding application with dynamic form content.{" "}
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - I stretch my mental capacity to develope UI as per the given
-            designs.
-          </span>
-          <br />
-        </div>
-      </div>
+      ))}
     </div>,
 
     /* PROGRAMMING SKILLS */
@@ -156,12 +148,14 @@ const Resume = (props) => {
       {programmingSkillsDetails.map((skill, index) => (
         <div className="skill-parent" key={index}>
           <div className="heading-bullet"></div>
-          <span>{skill.skill}</span>
-          <div className="skill-percentage">
-            <div
-              style={{ width: skill.ratingPercentage + "%" }}
-              className="active-percentage-bar"
-            ></div>
+          <div className="skill-content">
+            <span>{skill.skill}</span>
+            <div className="skill-percentage">
+              <div
+                style={{ width: skill.ratingPercentage + "%" }}
+                className="active-percentage-bar"
+              ></div>
+            </div>          
           </div>
         </div>
       ))}
@@ -192,8 +186,8 @@ const Resume = (props) => {
         description="Listening to soothing music is something i can never compromise with, skimming through Spotify's pop songs charts is at times the best stress reliever that i can get my hands on."
       />
       <ResumeHeading
-        heading="Competitive Gaming"
-        description="I like to challenge my reflexes a lot while competing in football games, pushing the rank and having interactive gaming sessions excites me the most."
+        heading="Basketball Games"
+        description="I like to challenge my reflexes a lot while competing in basketball games, pushing the rank and having interactive gaming sessions excites me the most."
       />
     </div>,
   ];

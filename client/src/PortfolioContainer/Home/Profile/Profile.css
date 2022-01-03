@@ -46,6 +46,19 @@
   background-color: #d61737;
 }
 
+.hireme-btn{  
+  font-size: 12px;
+  color: whitesmoke;
+  border-color: whitesmoke;
+  background-color: #1f2235;
+}
+
+.hireme-btn:hover{
+  background-color: whitesmoke;
+  border-color: #1f2235;
+}
+
+
 .primary-btn:hover{
   background-color: #d61737;
   border-color: whitesmoke;
@@ -83,12 +96,14 @@
 }
 
 .colz .colz-icon i {
-  color: white;
-  padding: 8px;
+  color: whitesmoke;
+  padding: 8px;  
   padding-left: 0px;
 }
-.colz .cols-icon i:hover {
-  transform: scale(1.5);
+
+.colz-icon i:hover{  
+  color: whitesmoke;
+  transform: scale(1.2);
 }
 
 /*IPAD PRO RESPONSIVENESS*/
