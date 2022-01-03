@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import DropDown from "./DropDown/DropDown";
+import { useTranslation } from 'react-i18next'
+import i18next from 'i18next'
+import cookies from 'js-cookie'
+import classNames from 'classnames'
+
+import DropDown, { DropdownItem } from "./DropDown/DropDown";
 import {
   TOTAL_SCREENS,
   GET_SCREEN_INDEX,
@@ -8,26 +13,37 @@ import ScrollService from "../../../utilities/ScrollService";
 import { faBars, faLanguage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
+import "flag-icons/css/flag-icons.min.css"
+
+const languages = [
+  {
+    code: "fr",
+    name: "Français",
+    country_code: "fr",
+  },
+  {
+    code: "en",
+    name: "English",
+    country_code: "gb",
+  },
+  {
+    code: "ar",
+    name: "العربية",
+    dir: "rtl",
+    country_code: "sa",
+  },
+];
 
 export default function Header() {
-  const languages = [
-    {
-      code: "fr",
-      name: "Français",
-      country_code: "fr",
-    },
-    {
-      code: "en",
-      name: "English",
-      country_code: "gb",
-    },
-    {
-      code: "ar",
-      name: "العربية",
-      dir: "rtl",
-      country_code: "sa",
-    },
-  ];
+  const currentLanguageCode = cookies.get('i18next') || 'en'
+  const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
+  const { t } = useTranslation()
+
+  useEffect(() => {
+    console.log('Setting page stuff')
+    document.body.dir = currentLanguage.dir || 'ltr'
+    // document.title = t('app_title')
+  }, [currentLanguage, t])
 
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
@@ -104,33 +120,31 @@ export default function Header() {
         >
           {getHeaderOptions()}
         </div>
-        <ul>
-          <DropDown
-            icon={<FontAwesomeIcon className="language" icon={faLanguage} />}
-          >
-            {languages.map(({ code, name, country_code }) => (
-              <li key={country_code}>
-                <button
-                  className={classNames("dropdown-item", {
-                    disabled: currentLanguageCode === code,
-                  })}
-                  onClick={() => {
-                    i18next.changeLanguage(code);
-                    console.log(code);
+
+        <DropDown
+          icon={<FontAwesomeIcon className="language" icon={faLanguage} />}
+          title={t('language')}
+        >
+          {languages.map(({ code, name, country_code }) => (
+            <DropdownItem
+              key={country_code}
+              disabled={currentLanguageCode === code}
+              handleClick={() => {
+                console.log(code);
+                i18next.changeLanguage(code);
+              }}
+              leftIcon={
+                <span
+                  className={`fi fi-${country_code} mx-2`}
+                  style={{
+                    opacity: currentLanguageCode === code ? 0.5 : 1,
                   }}
-                >
-                  <span
-                    className={`flag-icon flag-icon-${country_code} mx-2`}
-                    style={{
-                      opacity: currentLanguageCode === code ? 0.5 : 1,
-                    }}
-                  ></span>
-                  {name}
-                </button>
-              </li>
-            ))}
-          </DropDown>
-        </ul>
+                />
+              }>
+              {name}
+            </DropdownItem>
+          ))}
+        </DropDown>
       </div>
     </div>
   );
