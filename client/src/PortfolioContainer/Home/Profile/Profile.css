@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   color: aliceblue;
+  gap: 100px;
 }
 
 .profile-details-name {
@@ -79,7 +80,6 @@
   border-radius: 50%;
   height: 380px;
   width: 380px;
-  margin: 0 0px 0 100px;
 }
 .profile-picture-background {
   height: 92%;
@@ -108,9 +108,10 @@
 
 /*IPAD PRO RESPONSIVENESS*/
 @media only screen and (max-width: 1110px) {
-  .profile-picture {
-    margin: 0 0px 0 80px;
+  .profile-parent {
+    gap: 80px;
   }
+  
   .profile-details-name {
     font-size: 20px;
   }
@@ -124,8 +125,11 @@
   }
 }
 @media only screen and (max-width: 910px) {
+  .profile-parent {
+    gap: 4px;
+  }
+
   .profile-picture {
-    margin: 0 0 0 4px;
     height: 320px;
     width: 320px;
   }
