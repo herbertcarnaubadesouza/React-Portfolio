@@ -80,7 +80,7 @@ const Resume = (props) => {
         "Technologies Used:  Javascript, Html, Css, Jquery, Wordpress.",
     },
     {
-      title: "A lot of Personal Websites",
+      title: "Free Lances",
       duration: { fromDate: "2020", toDate: "Present" },
       description:
         "Online ecommerce website, personal portfolio and more. Come to see the best of the responsive websites.",
@@ -92,7 +92,7 @@ const Resume = (props) => {
 
   const workHistoryDetails = [
     {
-      title: "Claudino Softaware Solutions",
+      title: "Claudino Softaware ",
       duration: { fromDate: "2020", toDate: "2021" },
       description:
         "Developed a lot projects with Xamarin Forms and REST API for a SAPB1 Data Collector.",

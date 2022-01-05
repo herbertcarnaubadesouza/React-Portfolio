@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 import cookies from 'js-cookie'
-import classNames from 'classnames'
+
 
 import DropDown, { DropdownItem } from "./DropDown/DropDown";
 import {
@@ -18,8 +18,8 @@ import "flag-icons/css/flag-icons.min.css"
 const languages = [
   {
     code: "fr",
-    name: "Français",
-    country_code: "fr",
+    name: "Português (BR)",
+    country_code: "br",
   },
   {
     code: "en",

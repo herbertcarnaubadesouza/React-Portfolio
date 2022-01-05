@@ -39,6 +39,13 @@
   color: var(--dark-red);
 }
 
+.language{
+  font-size: 36px;
+  cursor: pointer;
+  margin: 0px 10px;
+  color: var(--white);
+}
+
 /*IPAD PRO RESPONSIVENESS*/
 @media only screen and (max-width: 1110px) {
   header-parent {

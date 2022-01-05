@@ -33,12 +33,12 @@ export default function Team(props) {
       0: {
         items: 1,
         nav: false,
-      },
+      },    
       600: {
-        items: 2,
+        items: 1,
         nav: false,
       },
-      1000: {
+      1030: {
         items: 3,
         nav: false,
       },
