@@ -4,8 +4,6 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utilities/ScrollService";
-import Animations from "../../utilities/Animations";
 import "./Testimonial.css";
 
 import lucas from "../../../src/img/Testimonial/tutaTestemunha.jpg"
@@ -16,14 +14,6 @@ import diego from "../../../src/img/Testimonial/Diego.png"
 import shape from "../../../src/img/Testimonial/wavesNegative.svg";
 
 export default function Testimonial(props) {
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
-  };
-
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
   const options = {
     loop: true,
     margin: 0,
@@ -39,7 +29,7 @@ export default function Testimonial(props) {
         nav: false,
       },
       600: {
-        items: 2,
+        items: 1,
         nav: false,
       },
       1000: {
@@ -50,7 +40,7 @@ export default function Testimonial(props) {
   };
 
   return (
-    <div className="testimonial-container fade-in" id={props.id || ""}>
+    <div className="testimonial-container" id={props.id || ""}>
       <ScreenHeading
         title={"Testimonial"}
         subHeading={"What My Clients Say About Me"}

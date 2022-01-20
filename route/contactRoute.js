@@ -38,7 +38,7 @@ router.post("/contact", (req, res) => {
   smtpTransporter.sendMail(mailOptions, (error) => {
     try {
       if (error)
-        return res.status(400).json({ msg: "Please Fill All The Fields!" });
+        return res.status(400).json({ msg: "Please Fill All The Fields!",error });
       res.status(200).json({ msg: "Thank You For Contacting Junin." });
     } catch (error) {
       if (error) return res.status(500).json({ msg: "There is server error" });

@@ -6,18 +6,9 @@ import { toast } from "react-toastify";
 import imgBack from "../../../src/images/mailz.png";
 import load1 from "../../../src/images/load2.gif";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utilities/ScrollService";
-import Animations from "../../utilities/Animations";
 import "./ContactMe.css";
 
 export default function ContactMe(props) {
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
-  };
-
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -64,7 +55,7 @@ export default function ContactMe(props) {
   };
 
   return (
-    <div className="main-container fade-in" id={props.id || ""}>
+    <div className="main-container" id={props.id || ""}>
       <ScreenHeading subHeading={"Lets Keep In Touch"} title={"Contact Me"} />
       <div className="central-form">
         <div className="col">

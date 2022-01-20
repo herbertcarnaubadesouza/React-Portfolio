@@ -4,8 +4,6 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utilities/ScrollService";
-import Animations from "../../utilities/Animations";
 
 import tuta from "../../../src/assets/Team/tutaNaLente.png";
 import senior from "../../../src/assets/Team/senior.png";
@@ -15,13 +13,6 @@ import gustavoWordpress from "../../../src/assets/Team/gustavoWordpress.png";
 import "./Team.css";
 
 export default function Team(props) {
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props?.id) return;
-    Animations.animations.fadeInScreen(props?.id);
-  };
-
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
   const options = {
     margin: 20,
@@ -46,7 +37,7 @@ export default function Team(props) {
   };
 
   return (
-    <div className="team-container fade-in" id={props.id || ""}>
+    <div className="team-container" id={props.id || ""}>
       <ScreenHeading title={"Team"} subHeading={"Who Works With Me?"} />
       <section className="team-section">
         <div className="container">

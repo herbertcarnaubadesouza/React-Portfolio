@@ -10,46 +10,43 @@ export const TOTAL_SCREENS = [
   {
     screen_name: "Home",
     component: Home,
-    isMenu : true
+    isMenu : true,
+    shouldFade: false
   },
   {
     screen_name: "AboutMe",
     component: AboutMe,
-    isMenu : true
+    isMenu : true,
+    shouldFade: true
   },  
   {
     screen_name: "Team",
     component: Team,
-    isMenu : true
+    isMenu : true,
+    shouldFade: true
   },  
   {
     screen_name: "Resume",
     component: Resume,
-    isMenu : true
+    isMenu : true,
+    shouldFade: true
   },
   {
     screen_name: "Testimonial",
     component: Testimonial,
-    isMenu : true
+    isMenu : true,
+    shouldFade: true
   }, 
   {
     screen_name: "ContactMe",
     component: ContactMe,
-    isMenu : true
+    isMenu : true,
+    shouldFade: true
   },  
   {
     screen_name: "Footer",
     component: Footer,
-    isMenu: false
+    isMenu: false,
+    shouldFade: false
   },
 ];
-
-export const GET_SCREEN_INDEX = (screen_name) => {
-  if (!screen_name) return -1;
-
-  for (let i = 0; i < TOTAL_SCREENS.length; i++) {
-    if (TOTAL_SCREENS[i].screen_name === screen_name) return i;    
-  }
-
-  return -1;
-};

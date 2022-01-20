@@ -6,9 +6,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <div className="App">
-      <ToastContainer />
-      <PortfolioContainer />      
+    <div className="App">      
+      <PortfolioContainer /> 
+      <ToastContainer />     
     </div>
   );
 }

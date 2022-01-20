@@ -18,3 +18,8 @@
   --toast-success: #0cbfae;
   --loader-color: #0cbfae;
 }
+
+
+html{
+  overflow-y:auto;
+}

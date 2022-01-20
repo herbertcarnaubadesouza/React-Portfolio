@@ -1,17 +1,9 @@
 import React, { useEffect } from "react";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utilities/ScrollService";
-import Animations from "../../utilities/Animations";
 import "./AboutMe.css";
 
 export default function AboutMe(props) {
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
-  };
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
+  
   const SCREEN_CONSTSANTS = {
     description:
       "Full stack web and mobile developer with background knowledge in REST API, along with a knack of building applications with utmost efficiency. An extremely focused professional with a strong desire to learn more.",
@@ -38,7 +30,7 @@ export default function AboutMe(props) {
 
   return (
     <div
-      className="about-me-container screen-container fade-in"
+      className="about-me-container screen-container"
       id={props.id || ""}
     >
       <div className="about-me-parent">
