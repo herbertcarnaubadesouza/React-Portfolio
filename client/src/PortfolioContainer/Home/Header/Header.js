@@ -26,7 +26,7 @@ export default function Header() {
             className={getHeaderOptionsClasses(i)}
             onClick={() => switchScreen(i, Screen)}
           >
-            <span>{Screen.screen_name}</span>
+            <span>{t(Screen.screen_name)}</span>
           </div>
         )
     );
@@ -53,7 +53,6 @@ export default function Header() {
   return (
     <div
       className="header-container"
-      onClick={() => setShowHeaderOptions(!showHeaderOptions)}
     >
       <div className="header-parent">
         <div
@@ -66,6 +65,7 @@ export default function Header() {
           <span>JUNIN</span>
         </div>
         <div
+          onClick={() =>showHeaderOptions && setShowHeaderOptions(!showHeaderOptions)}
           className={
             showHeaderOptions
               ? "header-options show-hamburger-options"

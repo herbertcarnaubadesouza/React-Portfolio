@@ -8,7 +8,11 @@ import load1 from "../../../src/images/load2.gif";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import "./ContactMe.css";
 
+import { useLanguage } from "../../utilities/languages";
+
 export default function ContactMe(props) {
+
+  const { t } = useLanguage();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -56,11 +60,11 @@ export default function ContactMe(props) {
 
   return (
     <div className="main-container" id={props.id || ""}>
-      <ScreenHeading subHeading={"Lets Keep In Touch"} title={"Contact Me"} />
+      <ScreenHeading subHeading={t("Lets Keep In Touch")} title={t("ContactMe")} />
       <div className="central-form">
         <div className="col">
           <h2 className="title">
-            <Typical loop={Infinity} steps={["Get In Touch 📧", 1000]} />
+            <Typical loop={Infinity} steps={[t("Get In Touch 📧"), 1000]} />
           </h2>{" "}
           <a href="https://web.facebook.com/?_rdc=1&_rdr">
             <i className="fa fa-facebook-square" />
@@ -77,23 +81,23 @@ export default function ContactMe(props) {
         </div>
         <div className="back-form">
           <div className="img-back">
-            <h4>Send Your Email Here!</h4>
+            <h4>{t("Send Your Email Here!")}</h4>
             <img src={imgBack} alt="image not found" />
           </div>
           <form onSubmit={submitForm}>
             <p>{banner}</p>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">{t('Name')}</label>
             <input type="text" onChange={handleName} value={name} />
 
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">{t('Email')}</label>
             <input type="email" onChange={handleEmail} value={email} />
 
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">{t('Message')}</label>
             <textarea type="text" onChange={handleMessage} value={message} />
 
             <div className="send-btn">
               <button type="submit">
-                send
+                {t('send')}
                 <i className="fa fa-paper-plane" />
                 {bool ? (
                   <b className="load">

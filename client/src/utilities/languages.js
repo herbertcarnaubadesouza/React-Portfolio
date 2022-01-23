@@ -4,7 +4,7 @@ import cookies from 'js-cookie'
 
 const languages = [
   {
-    code: 'br',
+    code: 'br', 
     name: 'Português (BR)',
     country_code: 'br',
   },
@@ -14,10 +14,9 @@ const languages = [
     country_code: 'gb',
   },
   {
-    code: 'ar',
-    name: 'العربية',
-    dir: 'rtl',
-    country_code: 'sa',
+    code: 'es',
+    name: 'Español',        
+    country_code: 'es',
   },
 ]
 
@@ -27,11 +26,11 @@ function useLanguage() {
   const { t, i18n } = useTranslation()
 
   const setLanguage = (code) => {
+    window.location.reload();
     i18n.changeLanguage(code);
   }
 
   useEffect(() => {
-    console.log('Setting page stuff')
     document.body.dir = currentLanguage.dir || 'ltr'
     document.title = t('app_title')
   }, [currentLanguage, t])

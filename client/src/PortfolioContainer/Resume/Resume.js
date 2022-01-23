@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import "./Resume.css";
+import { useLanguage } from "../../utilities/languages";
 
 const Resume = (props) => {
+
+  const { t } = useLanguage();
   /* STATES */
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
@@ -34,11 +37,11 @@ const Resume = (props) => {
 
   /* STATIC RESUME DATA FOR THE LABELS*/
   const resumeBullets = [
-    { label: "Services", logoSrc: "service.svg" },
-    { label: "Work History", logoSrc: "work-history.svg" },
-    { label: "Programming Skills", logoSrc: "programming-skills.svg" },
-    { label: "Projects", logoSrc: "projects.svg" },
-    { label: "Interests", logoSrc: "interests.svg" },
+    { label: t("Services"), logoSrc: "service.svg" },
+    { label: t("Work History"), logoSrc: "work-history.svg" },
+    { label: t("Programming Skills"), logoSrc: "programming-skills.svg" },
+    { label: t("Projects"), logoSrc: "projects.svg" },
+    { label: t("Interests"), logoSrc: "interests.svg" },
   ];
 
   //here we have
@@ -55,27 +58,27 @@ const Resume = (props) => {
 
   const projectsDetails = [
     {
-      title: "SAP B1 Data Collector",
+      title: t("SAP B1 Data Collector"),
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "A Personal Portfolio website to showcase all my details and projects at one place.",
-      subHeading: "Technologies Used: .NET Core, Xamarin Forms, SQL Server",
+        t("Created a Data Collector integrated with SAP B1."),
+      subHeading: t("Technologies Used: .NET Core, Xamarin Forms, SQL Server"),
     },
     {
-      title: "Hotel Website",
+      title: t("Hotel Website"),
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "Created a beautiful responsive website for a hotel in Tatajuba, Ceará.",
+        t("Created a beautiful responsive website for a hotel in Tatajuba, Ceará."),
       subHeading:
-        "Technologies Used:  Javascript, Html, Css, Jquery, Wordpress.",
+        t("Technologies Used:  Javascript, Html, Css, Jquery, Wordpress."),
     },
     {
       title: "Free Lances",
       duration: { fromDate: "2020", toDate: "Present" },
       description:
-        "Online ecommerce website, personal portfolio and more. Come to see the best of the responsive websites.",
+        t("Online ecommerce website, personal portfolio and more. Come to see the best of the responsive websites."),
       subHeading:
-        "Technologies That I Use: Node Js, React Js, Wordpress, Bootstrap, Jquery.",
+        t("Technologies That I Use: Node Js, React Js, Wordpress, Bootstrap, Jquery."),
     },
   ];
 
@@ -85,16 +88,16 @@ const Resume = (props) => {
       title: "Claudino Softaware ",
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "Developed a lot projects with Xamarin Forms and REST API for a SAPB1 Data Collector.",
-      subHeading: "Technologies Used: .NET Core, Xamarin Forms, SQL Server",
+        t("Developed a lot projects with Xamarin Forms and REST API for a SAPB1 Data Collector."),
+      subHeading: t("Technologies Used: .NET Core, Xamarin Forms, SQL Server"),
     },
     {
       title: "Smark CRM",
       duration: { fromDate: "2022", toDate: "Present" },
       description:
-        "Works in the maintenance and development of the company's product.",
+        t("Works in the maintenance and development of the company's product."),
       subHeading:
-        "Technologies That I Use:  .NET Framework, SQL Server, Jquery, Bootstrap, Ajax.",
+        t("Technologies That I Use:  .NET Framework, SQL Server, Jquery, Bootstrap, Ajax."),
     },
   ];
 
@@ -103,16 +106,16 @@ const Resume = (props) => {
     /* Services */
     <div className="resume-screen-container" key="services">
       <ResumeHeading
-        heading="Website Development"
-        description="Come put your services on a fully responsive website, working on mobile, tablet, notebook and computers. The development time is proportional to the size of the site."
+        heading={t("Website Development")}
+        description={t("Come put your services on a fully responsive website, working on mobile, tablet, notebook and computers. The development time is proportional to the size of the site.")}
       />
       <ResumeHeading
-        heading="Social Media Management"
-        description="Currently, if you dont't put your services on social media, you are at a disadvantage. Talk to me and I solve this problem. The group manages more than 15 Intagram accounts."
+        heading={t("Social Media Management")}
+        description={t("Currently, if you dont't put your services on social media, you are at a disadvantage. Talk to me and I solve this problem. The group manages more than 15 Intagram accounts.")}
       />
       <ResumeHeading
-        heading="Put Your Site At The Top Of Google"
-        description="It's not enough to build a beautiful website if it doesn't appear to anyone. Make your website with us. We put your website at the top of Google. That way you will be able to reach more people with your product."
+        heading={t("Put Your Site At The Top Of Google")}
+        description={t("It's not enough to build a beautiful website if it doesn't appear to anyone. Make your website with us. We put your website at the top of Google. That way you will be able to reach more people with your product.")}
       />
     </div>,
 
@@ -168,16 +171,16 @@ const Resume = (props) => {
     /* Interests */
     <div className="resume-screen-container" key="interests">
       <ResumeHeading
-        heading="Teaching"
-        description="Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing."
+        heading={t("Teaching")}
+        description={t("Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing.")}
       />
       <ResumeHeading
-        heading="Music"
-        description="Listening to soothing music is something i can never compromise with, skimming through Spotify's pop songs charts is at times the best stress reliever that i can get my hands on."
+        heading={t("Music")}
+        description={t("Listening to soothing music is something i can never compromise with, skimming through Spotify's pop songs charts is at times the best stress reliever that i can get my hands on.")}
       />
       <ResumeHeading
-        heading="Basketball Games"
-        description="I like to challenge my reflexes a lot while competing in basketball games, pushing the rank and having interactive gaming sessions excites me the most."
+        heading={t("Basketball Games")}
+        description={t("I like to challenge my reflexes a lot while competing in basketball games, pushing the rank and having interactive gaming sessions excites me the most.")}
       />
     </div>,
   ];
@@ -229,7 +232,7 @@ const Resume = (props) => {
       id={props.id || ""}
     >
       <div className="resume-content">
-        <ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
+        <ScreenHeading title={t("Resume")} subHeading={t("My formal Bio Details")} />
         <div className="resume-card">
           <div className="resume-bullets">
             <div className="bullet-container">

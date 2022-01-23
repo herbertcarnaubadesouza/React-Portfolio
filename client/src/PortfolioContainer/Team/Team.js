@@ -11,8 +11,11 @@ import ribas from "../../../src/assets/Team/ribas.png";
 import maintz from "../../../src/assets/Team/maintz.png";
 import gustavoWordpress from "../../../src/assets/Team/gustavoWordpress.png";
 import "./Team.css";
+import { useLanguage } from "../../utilities/languages";
 
 export default function Team(props) {
+
+  const { t } = useLanguage();
 
   const options = {
     margin: 20,
@@ -38,7 +41,7 @@ export default function Team(props) {
 
   return (
     <div className="team-container" id={props.id || ""}>
-      <ScreenHeading title={"Team"} subHeading={"Who Works With Me?"} />
+      <ScreenHeading title={t("Team")} subHeading={t("Who Works With Me?")} />
       <section className="team-section">
         <div className="container">
           <div className="row">
@@ -53,9 +56,7 @@ export default function Team(props) {
                   <img src={tuta} alt="" />
                   <div className="text">Lucas Monteiro</div>
                   <p>
-                    Lucas is an excellent video and photo editor. Graduated in
-                    radio TV, at the age of 24, is part of the content editing
-                    team in a general way of the clients that close with us.
+                    {t('TutaDescription')}
                   </p>
                 </div>
               </div>
@@ -65,9 +66,7 @@ export default function Team(props) {
                   <img src={senior} alt="" />
                   <div className="text">Thiago Medeiros</div>
                   <p>
-                    It is part of the team of developers. Computer Engineering
-                    student, Thiago is currently working on the developer team from Apple
-                    Developer Academy.
+                    {t('SeniorDescription')}
                   </p>
                 </div>
               </div>
@@ -77,9 +76,7 @@ export default function Team(props) {
                   <img src={ribas} alt="" />
                   <div className="text">Matheus Ribas</div>
                   <p>
-                    Matheus Ribas de Miranda, is part of the area that is most
-                    valued in Digital Marketing, Traffic Management. Matheus has
-                    skills essential to show you reach more customers and users.
+                    {t('RibasDescription')}
                   </p>
                 </div>
               </div>
@@ -89,9 +86,7 @@ export default function Team(props) {
                   <img src={maintz} alt="" />
                   <div className="text">Fellipe Maintz</div>
                   <p>
-                    Maintz is the best digital strategist I know. know the
-                    algorithm Instagram like no one else. Felipe has the skills
-                    right to kickstart your business on Instagram.
+                    {t('MaintzDescription')}
                   </p>
                 </div>
               </div>
@@ -101,10 +96,7 @@ export default function Team(props) {
                   <img src={gustavoWordpress} alt="" />
                   <div className="text">Gustavo Romeiro</div>
                   <p>
-                    Gustavo is an extremely versatile guy technically. Have
-                    experience with photo editing, design and website
-                    development. has skills essential to differentiate your
-                    online business.
+                    {t('GustavoDescription')}
                   </p>
                 </div>
               </div>

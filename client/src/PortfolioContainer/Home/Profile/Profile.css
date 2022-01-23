@@ -108,6 +108,8 @@
 
 /*IPAD PRO RESPONSIVENESS*/
 @media only screen and (max-width: 1110px) {
+  
+  
   .profile-parent {
     gap: 80px;
   }
@@ -125,18 +127,25 @@
   }
 }
 @media only screen and (max-width: 910px) {
+  
+  
   .profile-parent {
     gap: 4px;
   }
 
   .profile-picture {
     height: 320px;
-    width: 320px;
+    width: 320px;    
   }
 }
 @media only screen and (max-width: 810px) {
-  .profile-picture {
-   
+  
+  h1 p{
+    height: 80px;
+    margin: 10px 20px 20px 20px;
+  }
+ 
+  .profile-picture {   
     margin-bottom:20px;
   }
   .profile-parent {

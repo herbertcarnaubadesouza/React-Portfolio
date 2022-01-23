@@ -1,22 +1,24 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import "./AboutMe.css";
+import { useLanguage } from "../../utilities/languages";
 
 export default function AboutMe(props) {
-  
+  const { t } = useLanguage();
+
   const SCREEN_CONSTSANTS = {
     description:
-      "Full stack web and mobile developer with background knowledge in REST API, along with a knack of building applications with utmost efficiency. An extremely focused professional with a strong desire to learn more.",
+      t('Description1'),
     highlights: {
       bullets: [
-        "Mobile and Web Developer",
-        "Interactive Front End as per the design",
-        "React and Xamarin Forms Knowledge",
-        ".NET Developer",
-        "Building REST API",
-        "Managing database",
+        t("Mobile and Web Developer"),
+        t("Interactive Front End as per the design"),
+        t("React and Xamarin Forms Knowledge"),
+        t(".NET Developer"),
+        t("Building REST API"),
+        t("Managing database"),
       ],
-      heading: "Here are a Few Highlights:",
+      heading: t("Here are a Few Highlights:"),
     },
   };
   const renderHighlight = () => {
@@ -34,7 +36,7 @@ export default function AboutMe(props) {
       id={props.id || ""}
     >
       <div className="about-me-parent">
-        <ScreenHeading title={"About Me"} subHeading={"Why Choose Me?"} />
+        <ScreenHeading title={t("AboutMe")} subHeading={t("Why Choose Me?")} />
         <div className="about-me-card">
           <div className="about-me-profile"></div>
           <div className="about-me-details">
@@ -51,11 +53,11 @@ export default function AboutMe(props) {
             <a href="https://api.whatsapp.com/send?phone=5511957978876&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20um%20site!">
               <button className="btn hireme-btn">
                 {" "}
-                Talk To Me{" "}
+                {t('Talk To Me')}{" "}
               </button>
             </a>
               <a href="Herbert SouzaCV.pdf" download="Herbert SouzaCV.pdf">
-                <button className="btn highlighted-btn">Get Resume</button>
+                <button className="btn highlighted-btn">{t('Get Resume')}</button>
               </a>{" "}
             </div>
           </div>

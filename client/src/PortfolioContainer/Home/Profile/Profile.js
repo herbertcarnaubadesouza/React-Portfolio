@@ -41,22 +41,22 @@ export default function Profile() {
                 <Typical
                   loop={Infinity}
                   steps={[
-                    "Enthusiastic Dev",
+                    t('Enthusiastic Dev'),
                     1000,
-                    "Full stack Developer",
+                    t('Full stack Developer'),
                     1000,
-                    ".NET Developer",
+                    t('.NET Developer'),
                     1000,
-                    "Cross Platform Dev",
+                    t('Cross Platform Dev'),
                     1000,
-                    "React Dev",
+                    t('React Dev'),
                     1000,
                   ]}
                 />
               </h1>
             </span>
             <span className="profile-role-tagline">
-              Knack of building applications with front and back end operations.
+              {t('Knack of building applications with front and back end operations.')}
             </span>
           </div>
 
@@ -64,11 +64,11 @@ export default function Profile() {
             <a href="https://api.whatsapp.com/send?phone=5511957978876&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20um%20site!">
               <button className="btn hireme-btn">
                 {" "}
-                Talk To Me{" "}
+                {t('Talk To Me')}{" "}
               </button>
             </a>
             <a href="Herbert SouzaCV.pdf" download="Herbert SouzaCV.pdf">
-              <button className="btn highlighted-btn">Get Resume</button>
+              <button className="btn highlighted-btn">{t('Get Resume')}</button>
             </a>
           </div>
         </div>

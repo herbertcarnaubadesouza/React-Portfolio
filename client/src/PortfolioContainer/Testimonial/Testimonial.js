@@ -13,7 +13,11 @@ import diego from "../../../src/img/Testimonial/Diego.png"
 
 import shape from "../../../src/img/Testimonial/wavesNegative.svg";
 
+import { useLanguage } from "../../utilities/languages";
+
 export default function Testimonial(props) {
+  const { t } = useLanguage();
+
   const options = {
     loop: true,
     margin: 0,
@@ -42,8 +46,8 @@ export default function Testimonial(props) {
   return (
     <div className="testimonial-container" id={props.id || ""}>
       <ScreenHeading
-        title={"Testimonial"}
-        subHeading={"What My Clients Say About Me"}
+        title={t("Testimonial")}
+        subHeading={t("What My Clients Say About Me")}
       />
       <section className="testimonial-section">
         <div className="container">
@@ -58,9 +62,7 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I patronized Ehizeex and when He delivered, I honestly
-                      fell in love with the project He is a very honest guy and
-                      he delivers ontime.
+                      {t("DiegoText")}
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -94,9 +96,7 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      It was nice hiring this guy for my e-commerce project.He
-                      delivered even more than i can imagine. I recommend him
-                      for you.
+                      {t("MartaText")}
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -120,7 +120,7 @@ export default function Testimonial(props) {
                   <div className="client-info">
                     <img src={marta} alt="no internet connection"></img>
                     <h5>Marta Carnauba</h5>
-                    <p>Acupuncturist and Ozone Therapist</p>
+                    <p>{t("Acupuncturist and Ozone Therapist")}</p>
                   </div>
                 </div>
               </div>
@@ -129,9 +129,7 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      When he delivered my job, my head spinned, it was so nice
-                      and he implemented every functionality i requested for.
-                      Thank you.
+                      {t("EricaText")}
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -155,7 +153,7 @@ export default function Testimonial(props) {
                   <div className="client-info">
                     <img src={erica} alt="no internet connection"></img>
                     <h5>Erica Moro</h5>
-                    <p>Owner of the Avra Tatajuba Hotel</p>
+                    <p>{t("Owner of the Avra Tatajuba Hotel")}</p>
                   </div>
                 </div>
               </div>
@@ -164,9 +162,7 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      This guy is incredibly awesome, I hired him and when He
-                      delivered, I honestly fell in love with the project. He is
-                      indeed a great guy,
+                      {t("LucasText")}
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -190,7 +186,7 @@ export default function Testimonial(props) {
                   <div className="client-info">
                     <img src={lucas} alt="no internet connection"></img>
                     <h5>Lucas Monteiro</h5>
-                    <p>Photographer and Video Editor</p>
+                    <p>{("Photographer and Video Editor")}</p>
                   </div>
                 </div>
               </div>

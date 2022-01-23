@@ -85,3 +85,10 @@
   pointer-events: none;
   background-color: #525357;
 }
+
+
+@media screen and (max-width: 1023px)  {
+  .drop-menu {
+    inset: 0px 0px auto auto;
+  }
+}

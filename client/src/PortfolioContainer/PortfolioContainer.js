@@ -2,10 +2,11 @@ import React from 'react'
 import { TOTAL_SCREENS } from '../utilities/commonUtils'
 import { FadeInSection } from './FadeInSection/FadeInSection'
 
-export default function PortfolioContainer() {
+export default function PortfolioContainer() {  
+
   const mapAllScreens = () => {
     return TOTAL_SCREENS.map((screen) => {
-      const Component = screen.component ? (
+      const Component = screen.component ? (        
         <screen.component
           screenName={screen.screen_name}
           key={screen.screen_name}
@@ -23,5 +24,5 @@ export default function PortfolioContainer() {
     })
   }
 
-  return <div>{mapAllScreens()}</div>
+  return <>{mapAllScreens()}</>
 }
